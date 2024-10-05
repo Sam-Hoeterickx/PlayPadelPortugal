@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url("https://use.typekit.net/kxh3iir.css");
+:root {
+	--main-color: #3672e8;
+	--accent-color: #EBE9EB;
+	--font-color: #000000;
+}
+
+body{
+    background-color: var(--accent-color);
+    color: var(--font-color);
+    font-family: 'Roboto';
+    font-size: 14pt;
+    line-height: 1.5;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+#button{
+    border-radius: 25px;
+    background-color: var(--main-color) ;
+    padding: 10px 28px;
+    font-family: "amboy-black", sans-serif;
+    font-size: 16pt;
+    font-weight: 300;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+#sec-button{
+    border-radius: 25px;
+    background-color: var(--accent-color) ;
+    padding: 10px 28px;
+    font-family: "amboy-black", sans-serif;
+    font-size: 16pt;
+    font-weight: 300;
+    color: var(--main-color);
+    text-decoration: none;
+}
+#large-container{
+    margin: 84px 0;
+}
+#container{
+    margin: 84px 10%;
+}
+
+nav{
+    margin: 0 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12pt;
+}
+.logo img{
+    width: 150px;
+    height: auto;
+}
+.navigation{
+    display: flex;
+    list-style-type: none;
+    font-weight: 300;
+    text-align: center;
+}
+.navigation li{
+    margin-left: 50px;
+}
+.navigation a{
+    color: var(--font-color);
+    text-decoration: none;
+}
+#navigation-home-ball{
+    height: 20px;
+    width: auto;
+    margin: 0 10px;
+    visibility: visible;
+}
+#navigation-galerij-ball{
+    height: 20px;
+    width: auto;
+    visibility: hidden;
+}
+
+nav img{
+    width: 100px;
+    height: auto;
+}
+
+.hero-info{
+    text-align: center;
+}
+.hero-info h2{
+    font-size: 32pt;
+    font-family: "amboy-black", sans-serif;
+    font-weight: 300;
+}
+.general-info{
+    margin-bottom: 64px;
+}
+.more-info li{
+    list-style-type: none;
+}
+.more-info img{
+    width: 25px;
+    padding-right: 5px;
+}
+.about-us-wrapper{
+    background-image: url("assets/images/background_padel_field.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 64px 0;
+}
+.about-us{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.about-us img{
+    width: 400px;
+    margin-left: 5%;
+}
+.about-us p{
+    width: 800px;
+    color: var(--accent-color);
+}
+.partnership h2#title{
+    font-size: 18pt;
+    text-align: center;
+    font-weight: 500;
+    width: 75%;
+    margin: 0 auto;
+}
+.club{
+    margin: 100px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.club-info{
+    text-align: center;
+    width: 35%;
+}
+
+.club-info img#logo-cpc{
+    width: 200px;
+    border-radius: 100px;
+}
+.club-info img#location-pin{
+    width: 20px;
+}
+
+.more{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.general-club-info{
+    width: 50%;
+}
+.general-club-info h2{
+    font-family: "amboy-black", sans-serif;
+    font-weight: 300;
+}
+.general-club-info li{
+    font-size: 13pt;
+}
+.price-wrapper{
+    width: 35%;
+}
+.price{    
+    background-color: var(--main-color);
+    border-radius: 25px;
+    padding: 64px 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.price h2{
+    font-family: "amboy-black", sans-serif;
+    font-weight: 300;
+    margin-top: 0;
+}
+.price h3{
+    font-weight: 300;
+    font-family: "amboy-black", sans-serif;
+    font-size: 10pt;
+}
+.price h3 strong#price{
+    font-family: "amboy-black", sans-serif;
+    font-weight: 300;
+    font-size: 30pt;
+}
+
+.verblijf-wrapper{
+    background-color: var(--main-color);
+}
+.verblijf{
+    padding: 48px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--accent-color);
+}
+.verblijf h2{
+    font-family: "amboy-black", sans-serif;
+}
+.verblijf-info-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.verblijf-info{
+    width: 50%;
+}
+.verblijf-info-list li{
+    float: left;
+    list-style-type: none;
+    padding: 0px 15px;
+    text-align: center;
+}
+.verblijf-info-list img{
+    width: 35px;
+}
+.foto-maps iframe{
+    border-radius: 50px;
+}
+
+.hero-verblijf-picture{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

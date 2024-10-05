@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url("https://use.typekit.net/kxh3iir.css");
+:root {
+	--main-color: #3672e8;
+	--accent-color: #EBE9EB;
+	--font-color: #000000;
+    --hover-main-color: #3671e8e2;
+    --main-font: 'Roboto';
+    --secundary-font: "amboy-black", sans-serif;
+}
+
+body{
+    background-color: var(--accent-color);
+    color: var(--font-color);
+    font-family: 'Roboto';
+    font-size: 14pt;
+    line-height: 1.5;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    margin: 0 10% 124px;
+}
+
+#button{
+    background-color: var(--main-color);
+    color: var(--accent-color);
+    padding: 18px 44px;
+    border-radius: 50px;
+
+    font-family: var(--secundary-font);
+    font-weight: 200;
+}
+#btn{
+    background-color: var(--main-color);
+    color: var(--accent-color);
+    padding: 18px 70px;
+    border-radius: 50px;
+
+    font-family: var(--secundary-font);
+    font-weight: 200;
+}
+a#button:hover,
+a#btn:hover{
+    background-color: var(--hover-main-color);
+}
+h1{
+    font-family: var(--secundary-font);
+    font-size: 28pt;
+}
+a{
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+section{
+    margin-bottom: 124px;
+}
+nav{
+    margin: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+nav .navigation-links a{
+    margin-left: 45px;
+}
+section.hero-video-section{
+    margin: 0;
+}
+section.hero-info-section .main-info{
+    text-align: center;
+    margin: 154px 0;
+}
+section.hero-info-section .main-info p{
+    margin-bottom: 32px;
+}
+
+section.info-icons-wrapper{
+    display: flex;
+    background-color: var(--main-color);
+    padding: 52px 10%;
+    margin: -10px 0 0;
+}
+.info-icon{
+    width: 400px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+.info-icon.border{
+    border-right: 1pt solid var(--accent-color);
+}
+.info-icon img{
+    width: 40px;
+}
+.info-icon p{
+    font-size: 12pt;
+    width: 50%;
+    color: var(--accent-color);
+}
+section.about-us{
+    /* background-color: var(--main-color); */
+    padding: 64px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: var(--accent-color);    
+}
+section.about-us img{
+    width: 400px;
+}
+section.about-us p{
+    width: 55%;
+}
+section.partnership{
+    display: flex;
+    justify-content: space-between;
+
+}
+section.partnership video{
+   width: 50%;
+}
+
+.cpc-padel-club{
+    width: 30%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+.cpc-padel-club h3{
+    font-size: 16pt;
+    font-weight: 600;
+    margin: 20px 0 10px;
+}
+.cpc-padel-club p {
+    margin: 10px 0;
+}
+.cpc-padel-club img.CPC-logo{
+    width: 175px;
+    border-radius: 100px;
+}
+.cpc-padel-club p img#icon-location-pin{
+    width: 30px;
+    border-radius: none;
+}
+section.price-wrapper h3{
+    font-family: var(--secundary-font);
+    font-size: 42pt;
+    color: var(--main-color);
+    margin: 0;
+}
+section.price-wrapper h4{
+    font-size: 16pt;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: var(--main-color);
+    font-weight: 800;
+}
+section.price-wrapper{
+    display: flex;
+    justify-content: center;
+    background-image: url(./assets/images/background-padel-3.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+.price-section{
+    background-color: var(--accent-color);
+    box-shadow: 2px 2px 25px 2px #3671e885;
+    padding: 52px 100px;
+    border-radius: 20px;
+}
+#pricetag{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.price-wrapper p{
+    font-size: 12pt;
+    font-weight: 200;
+    color: darkslategray;
+    font-style: italic;
+    margin: 0;
+}
+.price-wrapper p#inclusive{
+    margin-top: 24px;
+    text-decoration: underline;
+}
+.price-section ul{
+    padding-left: 20px;
+    margin-top: 0;
+    margin-bottom: 52px;
+    color: darkslategray;
+    font-style: italic;
+}
+
+section.stay-section{
+    /* background-color: var(--main-color); */
+    padding: 64px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: var(--accent-color);
+}
+
+section.stay-section iframe{
+    width: 400px;
+    border-radius: 25px;
+}
+section.stay-section .info-stay{
+    width: 55%;
+}
+section.stay-section h2{
+    font-family: var(--secundary-font);
+    font-size: 32pt;
+}
+.info-stay-title{
+    display: flex;
+    justify-content: space-between;
+}
+.verblijf-info-list{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.verblijf-info-list img{
+    width: 30px;
+}
+.verblijf-info-list p{
+   text-align: center;
+}
+.gallery-homepage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gallery-homepage a{
+    margin-top: 32px;
+}
+
+section.footer{
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+
+    background-color: var(--main-color);
+    padding: 50px 10%;
+    margin-bottom: 0;
+}
+section.footer .logo img{
+    width: 45%;
+    max-width: 300px;
+}
+section.footer a,
+section.footer p{
+    color: var(--accent-color);
+    width: 300px;
+}
+section.footer p{
+    text-align: center;
+}
+
+.footer-info{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+.footer-info a{
+    padding: 10px 0;
+}
+.name{
+    display: flex;
+    align-items: flex-end;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+@media(max-width:768px){
+    section.info-icons-wrapper{
+        display: flex;
+        flex-direction: column;
+        padding: 30px 0;
+    }
+    section.info-icons-wrapper img{
+        width: 20px;
+    }
+    .info-icon{
+        width: 100%;
+    }
+    .info-icon.border{
+        border-right: none;
+        height: 125px;
+    }
+    .verblijf-info-list{
+        width: 190px;
+    }
+}
+@media(max-width: 1024px){
+    h1{
+        font-size: 24pt;
+    }
+    p{
+        font-size: 11pt;
+    }
+    section{
+        margin-bottom: 64px;
+    }
+    #button{
+        padding: 10px 20px;
+
+    }
+    #container{
+        margin: 0 1%;
+    }
+    nav{
+        margin: 15px 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+    nav img{
+        width: 150px;
+    }
+    nav .navigation-links a{
+        margin-left: 20px;
+    }
+    .info-icon img{
+        width: 30px;
+    }
+    .info-icon p{
+        font-size: 10pt;
+    }
+    section.hero-info-section .main-info{
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 48px;
+    }
+    section.about-us-wrapper{
+        margin-top: 64px;
+        background-color: var(--main-color);
+    }
+    section.about-us{
+        padding: 64px 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    
+        color: var(--accent-color);    
+    }
+    section.about-us img{
+        width: 60%;
+        max-width: 400px;
+        margin-bottom: 32px;
+    }
+    section.about-us p{
+        width: 80%;
+    }
+    section.partnership{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section.partnership video{
+        margin-top: 32px;
+       width: 90%;
+    }
+    .cpc-padel-club{
+        width: 80%;
+    }
+    
+    section.price-wrapper h3{
+        font-size: 38pt;
+    }
+    section.price-wrapper h4{
+        font-size: 14pt;
+    }
+    section.price-wrapper{
+        margin-top: 64px;
+        display: flex;
+        justify-content: center;
+        background-image: none;
+
+    }
+    .price-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        max-width: 350px;
+        padding: 52px 50px;
+    }
+    
+    section.stay-section-wrapper{
+        background-color: var(--main-color);
+    }
+    section.stay-section{
+        padding: 64px 0%;
+        flex-direction: column-reverse;
+    }
+    
+    section.stay-section iframe{
+        width: 100%;
+        height: 300px;
+        border-radius: 0;
+    }
+    section.stay-section .info-stay{
+        width: 80%;
+        margin-bottom: 32px;
+    }
+    .info-stay-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-stay-title h2{
+        margin-bottom: 0px;
+    }
+    .gallery-homepage img{
+        width: 80%;
+    }
+    .gallery-homepage a{
+        margin-top: 32px;
+    }
+    
+    section.footer{
+        margin-top: 64px;
+        flex-direction: column-reverse;
+        align-self: center;
+    }
+    section.footer .logo img{
+        max-width: 200px;
+
+    }
+
+    section.footer p, section.footer a{
+        text-align: center;
+        width: 100%;
+    }
+    .footer-info{
+        margin-bottom: 32px;
+    }
+}
+
+@media(min-width:1024px){
+    section.about-us-wrapper{
+        background-image: url(./assets/images/background_padel_field.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    section.stay-section-wrapper{
+        background-image: url(./assets/images/background_padel_field.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    section.price-wrapper{
+        background-image: url(./assets/images/background-padel-3.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 80%;
+    }
+}
