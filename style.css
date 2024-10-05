@@ -307,7 +307,7 @@ section.footer p{
     }
     .info-icon.border{
         border-right: none;
-        height: 125px;
+        height: 100px;
     }
     .verblijf-info-list{
         width: 190px;
@@ -331,7 +331,7 @@ section.footer p{
         margin: 0 1%;
     }
     nav{
-        margin: 15px 5%;
+        margin: 15px 5% 32px;
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -342,6 +342,7 @@ section.footer p{
     }
     nav .navigation-links a{
         margin-left: 20px;
+        font-size: 12pt;
     }
     .info-icon img{
         width: 30px;
