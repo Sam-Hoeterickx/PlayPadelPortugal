@@ -58,6 +58,9 @@ a{
 section{
     margin-bottom: 124px;
 }
+.phone{
+    display: none;
+}
 nav{
     margin: 15px 5%;
     display: flex;
@@ -125,12 +128,20 @@ section.about-us p{
 section.partnership{
     display: flex;
     justify-content: space-between;
-
+    flex-wrap: wrap;
 }
 section.partnership video{
    width: 50%;
 }
-
+.partnership-title{
+    width: 80%;
+    text-align: center;
+    margin: 0 10% 32px;
+}
+.partnership-title h4{
+    font-weight: 400;
+    font-size: 18pt;
+}
 .cpc-padel-club{
     width: 30%;
     max-width: 600px;
@@ -181,7 +192,7 @@ section.price-wrapper{
 .price-section{
     background-color: var(--accent-color);
     box-shadow: 2px 2px 25px 2px #3671e885;
-    padding: 52px 100px;
+    padding: 120px 80px;
     border-radius: 20px;
 }
 #pricetag{
@@ -206,6 +217,9 @@ section.price-wrapper{
     margin-bottom: 52px;
     color: darkslategray;
     font-style: italic;
+}
+.price-section a#btn{
+    margin-left: 15%;
 }
 
 section.stay-section{
@@ -294,6 +308,12 @@ section.footer p{
     align-items: center;
 }
 @media(max-width:768px){
+    .phone{
+        display: inline;
+    }
+    .laptop{
+        display: none;
+    }
     section.info-icons-wrapper{
         display: flex;
         flex-direction: column;
@@ -311,6 +331,9 @@ section.footer p{
     }
     .verblijf-info-list{
         width: 190px;
+    }
+    .partnership-title{
+        display: none;
     }
 }
 @media(max-width: 1024px){
@@ -406,10 +429,15 @@ section.footer p{
     .price-section{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        /* align-items: center; */
         width: 60%;
         max-width: 350px;
         padding: 52px 50px;
+    }
+    .price-section a#btn {
+        text-align: center;
+        margin-right: 0;
+        margin-left: 0;
     }
     
     section.stay-section-wrapper{
@@ -462,8 +490,18 @@ section.footer p{
         margin-bottom: 32px;
     }
 }
-
-@media(min-width:1024px){
+@media(max-width:1280px){
+    section.about-us-wrapper{
+       background-color: var(--main-color);
+    }
+    section.stay-section-wrapper{
+        background-color: var(--main-color);
+    }
+    section.price-wrapper{
+        background-color: var(--accent-color);
+    }
+}
+@media(min-width:1280px){
     section.about-us-wrapper{
         background-image: url(./assets/images/background_padel_field.svg);
         background-position: center;
