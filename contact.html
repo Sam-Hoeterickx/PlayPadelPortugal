@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Play Padel Portugal</title>
+    <link rel="stylesheet" href="style.css?v=1">
+    <script src="https://kit.fontawesome.com/e5d911e6e9.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="x-icon" href="assets/images/Play_Padel_Portugal_Logo.png">
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="module" src="./script.js?v=1"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <a href="index.html"><img src="./assets/images/Play_Padel_Portugal_Logo.png" alt=""></a>
+            <div class="navigation-links">
+                <a href="index.html">Home</a>
+                <a href="gallery.html">Galerij</a>
+                <a href="contact.html" id="button">Contact</a>
+            </div>
+        </nav>
+        <section class="contact-sheet">
+            <form id="contact-form">
+                    <div class="booking-form-tekst">
+                        <h2>Voor reservering of meer informatie, gelieve onderstaand formulier in te vullen.</h2>
+                    </div>
+                    <div id="form-row" class="form-row-name">
+                        <label>Naam</label>
+                        <input type="text" name="user_name" required>
+                    </div>
+                    <div id="form-row" class="form-row-lastname">
+                        <label>Achternaam</label>
+                        <input type="text" name="user_lastname" required>
+                    </div>
+                    <div id="form-row" class="form-row-email">
+                        <label>Email</label>
+                        <input type="text" name="user_email" required>
+                    </div>
+                    <div id="form-row" class="form-row-phone">
+                        <label>GSM</label>
+                        <input type="text" name="user_phone" required>
+                    </div>
+                    <div id="form-row" class="form-row-club">
+                        <label>Lidmaatschap padelclub</label>
+                        <input type="text" name="user_clubmembership" required>
+                    </div>
+                    <div id="form-row" class="form-row-message">
+                        <label>Bericht</label>
+                        <textarea placeholder="Laat zeker de periode, het aantal personen en padelniveau achter en indien er vragen zijn stel ze gerust." id="contact-form-message" class="form-input" name="message" required></textarea>
+                    </div>
+                    <div class="button" id="contact-btn">
+                        <input id="submitbutton" class="btn-send" type="submit" value="Verstuur">
+                    </div>
+                </div>
+            </form>
+        </section>
+        
+        <section class="footer">
+            <div class="logo"> <a href="index.html"><img src="assets/images/Play_Padel_Portugal_Logo.png"></a></div>
+             <div class="name">
+                 <p>©2024 Play Padel Portugal</p>
+             </div>
+             <div class="footer-info">
+                 <a class="Home" href="index.html">Home</a>
+                 <a class="Galerij" href="gallery.html">Galerij</a>
+                 <a class="Contact-footer" href="contact.html">Contact</a>      
+             </div>
+         </section>
+    </div>
+</body>
+</html>

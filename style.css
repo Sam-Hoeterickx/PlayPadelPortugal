@@ -66,6 +66,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 12pt
 }
 nav img{
     width: 150px;
@@ -308,35 +309,104 @@ section.footer p{
     display: flex;
     align-items: center;
 }
-@media(max-width:768px){
-    .phone{
-        display: inline;
-    }
-    .laptop{
-        display: none;
-    }
-    section.info-icons-wrapper{
-        display: flex;
-        flex-direction: column;
-        padding: 30px 0;
-    }
-    section.info-icons-wrapper img{
-        width: 20px;
-    }
-    .info-icon{
-        width: 100%;
-    }
-    .info-icon.border{
-        border-right: none;
-        height: 100px;
-    }
-    .verblijf-info-list{
-        width: 190px;
-    }
-    .partnership-title{
-        display: none;
-    }
+
+section.contact-sheet{
+    background-color: var(--main-color);
+    padding: 64px 15%;
+    color: var(--accent-color);
 }
+section.contact-sheet h2{
+    font-family: var(--secundary-font);
+    text-align: center;
+    font-size: 26pt;
+}
+#form-row{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1pt solid var(--accent-color);
+    width: 45%;
+    margin-bottom: 64px;
+}
+
+#form-row input,
+#form-row textarea{
+    background-color: var(--main-color);
+    border: none;
+    color: var(--accent-color);
+    padding: 15px 5px 10px;
+}
+::placeholder {
+    color: #ffffff;
+    opacity: .75;
+}
+.alertbox{
+    display: flex;
+    justify-content: center; 
+    z-index: 99999;
+}
+.alert{
+    margin-top: 150px;
+    position: fixed;
+    text-align: center;
+
+    background-color: var(--accent-color);
+    color: var(--main-color);
+    padding: 3rem 7rem;
+
+    border-radius: 25px;
+    z-index: 99999;
+}
+.status{
+    display: flex;
+    justify-content: center;
+}
+#succes{
+    color: var(--main-color);
+    font-size: 64pt;
+    border: 2pt solid var(--main-color);
+    width: 125px;
+    height: 125px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    margin-top: 0;
+
+}
+#close{
+    margin-top: 20px;
+    border: none;
+    height: 40px;
+    color: var(--accent-color);
+    width: 100px;
+    padding: 10px 0;
+    border-radius: 25px;
+    background-color: var(--main-color);
+}
+#contact-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#submitbutton{
+    width: 400px;
+    margin: 0 auto;
+
+    border: none;
+    border-radius: 25px;
+    background-color: var(--accent-color) ;
+    color: var(--main-color);
+    font-size: 16pt;
+    font-family: var(--secundary-font);
+    height: 50px;
+}
+#contact-form input:focus,
+#contact-form textarea:focus{
+    border: 1pt solid var(--main-color);
+    outline: 1pt solid var(--main);
+}
+#contact-form textarea{
+    min-height: 75px;
+}
+
 @media(max-width: 1024px){
     h1{
         font-size: 24pt;
@@ -490,6 +560,12 @@ section.footer p{
     .footer-info{
         margin-bottom: 32px;
     }
+    #form-row{
+        width: 100%;
+    }
+    section.contact-sheet h2{
+        font-size: 20pt
+    }
 }
 @media(max-width:1280px){
     section.about-us-wrapper{
@@ -520,5 +596,37 @@ section.footer p{
         background-position: center;
         background-repeat: no-repeat;
         background-size: 80%;
+    }
+}
+@media(max-width:768px){
+    .phone{
+        display: inline;
+    }
+    .laptop{
+        display: none;
+    }
+    section.info-icons-wrapper{
+        display: flex;
+        flex-direction: column;
+        padding: 30px 0;
+    }
+    section.info-icons-wrapper img{
+        width: 20px;
+    }
+    .info-icon{
+        width: 100%;
+    }
+    .info-icon.border{
+        border-right: none;
+        height: 100px;
+    }
+    .verblijf-info-list{
+        width: 190px;
+    }
+    .partnership-title{
+        display: none;
+    }
+    section.contact-sheet h2{
+        font-size: 16pt
     }
 }
