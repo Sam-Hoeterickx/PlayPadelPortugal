@@ -629,4 +629,16 @@ section.contact-sheet h2{
     section.contact-sheet h2{
         font-size: 16pt
     }
+    #submitbutton{
+        width: 200px;
+        margin: 0 auto;
+    
+        border: none;
+        border-radius: 25px;
+        background-color: var(--accent-color) ;
+        color: var(--main-color);
+        font-size: 16pt;
+        font-family: var(--secundary-font);
+        height: 50px;
+    }
 }
