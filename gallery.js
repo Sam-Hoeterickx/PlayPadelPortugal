@@ -15,7 +15,7 @@ function selectAllImages(){
             e.preventDefault();
 
             const imageUrl = e.currentTarget.src;
-            const imagePath = imageUrl.split("5500/")[1];
+            const imagePath = imageUrl.split("https://sam-hoeterickx.github.io/PlayPadelPortugal/")[1];
             console.log(imagePath);
 
             
