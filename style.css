@@ -433,7 +433,7 @@ section.contact-sheet h2{
     position: relative;
 }
 .fullscreen-gallery .fullscreen-image img {
-    max-height: 600px; 
+    max-height: 400px; 
     object-fit: contain; 
 }
 
@@ -646,6 +646,14 @@ section.contact-sheet h2{
         background-position: center;
         background-repeat: no-repeat;
         background-size: 80%;
+    }
+     .fullscreen-gallery-wrapper{    
+        height: 50vh;
+        width: 75%;
+    }
+    .fullscreen-gallery .fullscreen-image img {
+        max-height: 600px; 
+        object-fit: contain; 
     }
 }
 @media(max-width:768px){
