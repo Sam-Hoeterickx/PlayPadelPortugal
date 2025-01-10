@@ -458,14 +458,15 @@ section.contact-sheet h2{
 .fullscreen-image .image-options{
     display: flex;
     justify-content: space-between;
+    margin-left: -15%;
 
-    width: 100%;
+    width: 130%;
 
     position: absolute;
-    bottom: -100px;    
+    top: 45%;   
 }
 .fullscreen-image .image-options p{
-    padding: 10px 25px;
+    padding: 12.5px 25px;
     cursor: pointer;
     
     font-size: 18pt;
