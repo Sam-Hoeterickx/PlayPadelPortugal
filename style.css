@@ -478,12 +478,12 @@ section.contact-sheet h2{
     border-radius: 10px;
 }
 
-.fullscreen-image .previous{
-    left: -5%;
+.fullscreen-image .image-options .previous{
+    margin-left: -75px;
     
 }
 .fullscreen-image .next{
-    right: -5%;
+    margin-right: -75px;
 }
 
 
