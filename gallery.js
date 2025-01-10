@@ -88,6 +88,7 @@ function resizeImage(imgElement) {
         if (imgElement.height > maxHeight) {
             imgElement.style.height = `${maxHeight}px`;
             imgElement.style.width= "";
+            // imgElement.style.margin= "0 35px";
         }
     } else if (window.innerWidth < 1024) {
         console.log("Window width below 1024px, applying different resizing...", maxWidth, maxHeight, imgElement.width, imgElement.height);
@@ -97,6 +98,7 @@ function resizeImage(imgElement) {
         if (imgElement.height > maxHeight) {
             console.log(imgElement.height)
             imgElement.style.height = `${maxHeight}px`;
+            // imgElement.style.margin= "0 35px";
         }
     }
 }
