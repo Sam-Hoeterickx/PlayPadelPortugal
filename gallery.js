@@ -1,6 +1,8 @@
 const ctx = document.querySelector('.row'); 
 let currentHTML = ctx.innerHTML;
 
+const imageArray = ['img-16-CPC-Padel-Club.jpg', 'img-23-Padelstage-november-2023.png', 'img-4-Casa-Perola-inside.jpeg', 'img-18-CPC-Padel-Club.jpg', 'img-19-Nazare.jpg', 'img-14-CPC-padel-cub.jpg', 'img-20-Nazare-beach.jpg', 'img-25-sunset-nazare.jpg', 'img-8-Casa-Perola-house-pool.jpg', 'img-15-CPC-Padel-Club.jpg', 'img-3-Casa-Perola-house.png', 'img-21-Nazare-boats.jpg', 'img-22-Padelstage-November2023.png', 'img-12-Casa-Perola-Pool.png', 'img-24-Padelstage-maart-2024.jpg', 'img-9-Casa-Perola-Dining-outside.jpg', 'img-1-Padelstage-maart.jpg', 'img-26-Casa-Perola-Room.png'];
+
 function init() {
     console.log("Initialization started...");
     selectAllImages();
@@ -14,39 +16,57 @@ function selectAllImages() {
             e.preventDefault();
 
             const imageUrl = e.currentTarget.src; 
-            // const imagePath = imageUrl.split("5500/")[1];
-            const imagePath = imageUrl.split("https://sam-hoeterickx.github.io/PlayPadelPortugal/")[1];
+            const imagePath = imageUrl.split("5500/assets/images/Gallery/")[1];
+            // const imagePath = imageUrl.split("https://sam-hoeterickx.github.io/PlayPadelPortugal/")[1];
 
             console.log("Image URL:", imageUrl);
             console.log("Image Path:", imagePath);
 
-    
-            const htmlString = `
-                <div class="fullscreen-gallery-wrapper">
-                    <div class="fullscreen-gallery">
-                        <div class="fullscreen-image">
-                            <div class="close">
-                                <p>x</p>
-                            </div>
-                            <img class="gallery-image fullscreen-img" src="${imagePath}" alt="Casa Perola room">
-                        </div>
-                    </div>
-                </div>
-            `;
+            const imageId = e.currentTarget.id;
+            let imageArrayNumber;
 
-            ctx.innerHTML += htmlString;
-
-            const fullscreenImg = document.querySelector('.fullscreen-img');
-            fullscreenImg.onload = () => {
-                resizeImage(fullscreenImg);
-                console.log(fullscreenImg);
-            };
-
-            closeButtons();
+            for(let i = 0; i <= imageArray.length; i++){
+                if( i == imageId){
+                    console.log(imageId, "id:", i);
+                    imageArrayNumber = i;
+                    console.log(imagePath);
+                    renderImage(i);
+                }
+            }          
         });
     });
 }
 
+
+function renderImage(i){
+    const existingGallery = document.querySelector('.fullscreen-gallery-wrapper');
+    if (existingGallery) existingGallery.remove();
+    const htmlString = `
+        <div class="fullscreen-gallery-wrapper">
+            <div class="fullscreen-gallery">
+                <div class="fullscreen-image">
+                    <div class="close">
+                        <p>x</p>
+                    </div>
+                    
+                    <img class="gallery-image fullscreen-img" src="assets/images/Gallery/${imageArray[i]}" alt="Casa Perola room">
+                    
+                </div>
+            </div>
+        </div>
+    `;
+
+    ctx.innerHTML += htmlString;
+    renderOptions(i);
+
+    const fullscreenImg = document.querySelector('.fullscreen-img');
+    fullscreenImg.onload = () => {
+        resizeImage(fullscreenImg);
+        console.log(fullscreenImg);
+    };
+
+    closeButtons();
+}
 
 function resizeImage(imgElement) {
     let maxWidth = window.innerHeight;
@@ -81,21 +101,16 @@ function resizeImage(imgElement) {
     }
 }
 
-// Function to close the fullscreen gallery
 function closeButtons() {
-    const closeBtn = document.querySelector('.close p'); // Close button inside the gallery
-    const galleryWrapper = document.querySelector('.fullscreen-gallery-wrapper'); // Wrapper
+    const closeBtn = document.querySelector('.close p');
 
     const closeGallery = () => {
-        ctx.innerHTML = currentHTML; // Restore the original content
-        selectAllImages(); // Reattach event listeners
+        ctx.innerHTML = currentHTML; 
+        selectAllImages(); 
     };
 
-    // Add event listeners to close the gallery
     if (closeBtn) closeBtn.addEventListener('click', closeGallery);
-    if (galleryWrapper) galleryWrapper.addEventListener('click', closeGallery);
 
-    // Close the gallery on pressing the Escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             closeGallery();
@@ -103,5 +118,35 @@ function closeButtons() {
     });
 }
 
-// Start the script
+function renderOptions(i) {
+    const fullscreenImageContainer = document.querySelector('.fullscreen-image');
+
+    const htmlString = `
+        <div class="image-options">
+            <div class="previous">
+                <p><</p>
+            </div>
+            <div class="next">
+                <p>></p>
+            </div>
+        </div>
+    `;
+    fullscreenImageContainer.innerHTML += htmlString;
+
+    const nextImageBtn = document.querySelector('.next');
+    const previousImageBtn = document.querySelector('.previous');
+
+    nextImageBtn.addEventListener('click', () => {
+        const nextIndex = (i + 1) % imageArray.length;
+        renderImage(nextIndex);
+    });
+
+    previousImageBtn.addEventListener('click', () => {
+        const prevIndex = (i - 1 + imageArray.length) % imageArray.length;
+        renderImage(prevIndex);
+    });
+}
+
+
+
 init();

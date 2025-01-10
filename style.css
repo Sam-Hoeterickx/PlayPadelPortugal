@@ -381,6 +381,7 @@ section.contact-sheet h2{
     border-radius: 25px;
     background-color: var(--main-color);
 }
+
 #contact-form{
     display: flex;
     flex-wrap: wrap;
@@ -437,7 +438,7 @@ section.contact-sheet h2{
 }
 .fullscreen-image .close{
     position: absolute;
-    right: 5%;
+    right: 4%;
 
     color: var(--accent-color);
     font-weight: 600;
@@ -448,12 +449,42 @@ section.contact-sheet h2{
 .close p{
     font-size: 18pt;
 }
-.fullscreen-gallery .close:hover{
-    color: red;
+.fullscreen-gallery .close:hover, .fullscreen-image .image-options p:hover{
+    color: var(--font-color);
     font-weight: 600;
     transform: scale(1.1);  
 }
 
+.fullscreen-image .image-options{
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+
+    position: absolute;
+    bottom: -100px;    
+}
+.fullscreen-image .image-options p{
+    padding: 10px 25px;
+    cursor: pointer;
+    
+    font-size: 18pt;
+    color: var(--accent-color);
+    font-weight: 600;
+
+    transition: transform .5s ease;
+
+    background-color: #3671e8c7;
+    border-radius: 10px;
+}
+
+.fullscreen-image .previous{
+    left: -5%;
+    
+}
+.fullscreen-image .next{
+    right: -5%;
+}
 
 
 @media(max-width: 1024px){
